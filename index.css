@@ -1,0 +1,118 @@
+/* General Styles */
+/* Default background */
+
+#weather-app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #1e9894, #2b338b, #2c359c, #178e8a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Weather Card */
+.card {
+    background: linear-gradient(135deg, #1CD8D2, #3A47D5);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Search Input */
+.search input {
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 16px;
+    color: black;  /* Text color set to black */
+    padding: 5px;
+}
+
+/* Search Button */
+.search button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button Hover Effect */
+.search button:hover {
+    background: #444;
+}
+
+/* Weather Icon */
+.weather-icon {
+    width: 100px;
+    margin: 10px auto;
+}
+
+/* Temperature and City */
+.temp {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.city {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* Weather Details */
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.col {
+    text-align: center;
+}
+
+.col img {
+    width: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+    .temp {
+        font-size: 28px;
+    }
+    .city {
+        font-size: 20px;
+    }
+}
